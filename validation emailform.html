@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>school assignment</title>
+<style>
+    body{
+        background-image: url(image11.jpg);
+        background-size: cover;    
+        background-position: center;
+        rotate: 30deg;
+
+    }
+    input[id=first]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        background-image: url(05.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position:right;
+    }
+    input[id=last]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        padding: 0rem;
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        background-image: url(05.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position:right;
+    }
+    input[id=email]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        padding: 0rem;
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        background-image:url(03.jpg) ;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: right;
+
+    }
+    input[id=password]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        padding: 0rem;
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        background-image:url(04.png) ;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    input[id=cpassword]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        padding: 0rem;
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        background-image:url(04.png) ;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    input[id=submit]{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        border-color: aqua;
+        padding: 0rem;
+        width: 200px;
+        height: 35px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    form[id=host]{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 30%;
+        margin-right: 50%;
+     background-color: rgb(0, 0,  0,  0.5);
+    color: #fff;
+        width: 400px;
+        height: 490px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        align-items: center;
+        border-radius: 10px;
+      
+    }
+::-webkit-input-placeholder{
+   color: gray;
+   padding-left: 05px;
+   font-size: 13px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    list-style-type: none;
+  color: white;
+  display: block
+}
+h1 a:hover {
+  background-color: #eee;
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+</style>
+</head>
+<body>
+
+<form id="host"   method="POST" onsubmit="return validation() ">
+    <center>
+        <img src="avatar1.png" height="30%" width="30%">
+<h1>Sign Up</h1>
+    <input type="text" id="first" placeholder="Enter your first name"><br>
+    <span id="username"></span><br>
+    <input type="text" id="last" placeholder="Enter your last name"><br>
+    <span id="firstname"></span><br>
+    <input type="text" id="email" placeholder="Enter your email address"><br>
+    <span id="emailform"></span><br>
+    <input type="password" id="password" placeholder="Enter your password"><br>
+    <span id="okay"></span><br>
+    <input type="password" id="cpassword" placeholder="Enter your confirm password"><br>
+    <span id="nooo"></span><br>
+    <input class="button" type="submit"  value= "submit" id="submit" placeholder="Submit"><br><br>
+</center>
+</form>
+<script type="text/javascript">
+function validation() {
+    var user =document.getElementById('first').value;
+    if (user==""){
+        document.getElementById('username').innerHTML="! Please fill the first name field";
+        return false;
+    }
+    var user =document.getElementById('last').value;
+    if (user==""){
+        document.getElementById('firstname').innerHTML="! Please fill the last name field";
+        return false;
+    }
+    var user =document.getElementById('email').value;
+    if (user==""){
+        document.getElementById('emailform').innerHTML="! Please fill the email address field";
+        return false;
+    }
+    var user =document.getElementById('password').value;
+    if (user==""){
+        document.getElementById('okay').innerHTML="! Please fill the password field";
+        return false;
+    }
+    var user =document.getElementById('cpassword').value;
+    if (user==""){
+        document.getElementById('nooo').innerHTML="! Please fill the confirm password field";
+        return false;
+    }
+}
+
+</script>
+</body>
+</html>
